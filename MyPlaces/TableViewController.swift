@@ -11,7 +11,8 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 70
+        tableView.rowHeight = 85
+        navigationController?.title = "My places"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,21 +41,22 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
-        // Configure the cell...
-        var content = cell.defaultContentConfiguration()
-        content.text = restaurantNames[indexPath.row]
-        content.image = UIImage(named: restaurantNames[indexPath.row])
-        content.imageProperties.cornerRadius = tableView.rowHeight / 2
-        //content.imageProperties.maximumSize = .init(width: 20, height: tableView.rowHeight)
-        cell.contentConfiguration = content
+//        var content = cell.defaultContentConfiguration()
+//        content.text = restaurantNames[indexPath.row]
+//        content.image = UIImage(named: restaurantNames[indexPath.row])
+//        content.imageProperties.cornerRadius =          cell.frame.size.height//tableView.rowHeight / 2
+//        cell.contentConfiguration = content
+        
+        
+        cell.nameLabel.text = restaurantNames[indexPath.row]
+        cell.imageOfView.image = UIImage(named: restaurantNames[indexPath.row])
+        cell.imageOfView.layer.cornerRadius = cell.imageOfView.frame.height / 2
 
-        
-        
         return cell
     }
-    //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
+
 
     /*
     // Override to support conditional editing of the table view.

@@ -14,6 +14,7 @@
 		1150BBA72AA55187009C126D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1150BBA62AA55187009C126D /* Assets.xcassets */; };
 		1150BBAA2AA55187009C126D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1150BBA82AA55187009C126D /* LaunchScreen.storyboard */; };
 		1150BBB22AA5528F009C126D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1150BBB12AA5528F009C126D /* TableViewController.swift */; };
+		115B00B32AA58AC300E64A1E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B00B22AA58AC300E64A1E /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1150BBA92AA55187009C126D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1150BBAB2AA55187009C126D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1150BBB12AA5528F009C126D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		115B00B22AA58AC300E64A1E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				1150BB9F2AA55186009C126D /* SceneDelegate.swift */,
 				1150BBA12AA55186009C126D /* ViewController.swift */,
 				1150BBB12AA5528F009C126D /* TableViewController.swift */,
+				115B00B22AA58AC300E64A1E /* CustomTableViewCell.swift */,
 				1150BBA32AA55186009C126D /* Main.storyboard */,
 				1150BBA62AA55187009C126D /* Assets.xcassets */,
 				1150BBA82AA55187009C126D /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1150BBA22AA55186009C126D /* ViewController.swift in Sources */,
+				115B00B32AA58AC300E64A1E /* CustomTableViewCell.swift in Sources */,
 				1150BB9E2AA55186009C126D /* AppDelegate.swift in Sources */,
 				1150BBA02AA55186009C126D /* SceneDelegate.swift in Sources */,
 				1150BBB22AA5528F009C126D /* TableViewController.swift in Sources */,
