@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DtN-oh-Ncf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -106,7 +107,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="189"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_photo" translatesAutoresizingMaskIntoConstraints="NO" id="FeA-Ps-FB3">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_photo" translatesAutoresizingMaskIntoConstraints="NO" id="FeA-Ps-FB3">
                                                     <rect key="frame" x="20" y="11" width="353" height="167"/>
                                                     <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 </imageView>
@@ -228,20 +229,31 @@
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="m4x-k6-Ogu" id="k7V-tW-zKe"/>
-                            <outlet property="delegate" destination="m4x-k6-Ogu" id="dTX-En-5BT"/>
+                            <outlet property="dataSource" destination="m4x-k6-Ogu" id="0NC-Gb-mM7"/>
+                            <outlet property="delegate" destination="m4x-k6-Ogu" id="8Z5-l0-0Gk"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add new Place" id="Ckk-GZ-9dU">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="nAn-91-zfO">
                             <connections>
-                                <segue destination="yVe-9A-Z4b" kind="unwind" unwindAction="cancelActionWithSegue:" id="c6z-5W-22k"/>
+                                <action selector="CanselAction:" destination="m4x-k6-Ogu" id="4RO-jX-5JG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EGF-7F-uH1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EGF-7F-uH1">
+                            <connections>
+                                <segue destination="yVe-9A-Z4b" kind="unwind" unwindAction="unwindSegueWithSegue:" id="tqC-bi-Bgg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="placeImage" destination="FeA-Ps-FB3" id="Rgt-IQ-333"/>
+                        <outlet property="placeLocation" destination="cBd-da-Ud9" id="uAI-iH-t8F"/>
+                        <outlet property="placeName" destination="MQM-qs-OoO" id="NCl-39-qFn"/>
+                        <outlet property="placeType" destination="SPJ-Uq-BIX" id="yzw-sG-4TI"/>
+                        <outlet property="saveButton" destination="EGF-7F-uH1" id="gqB-aa-7Sm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGZ-a4-juV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yVe-9A-Z4b" userLabel="Exit" sceneMemberID="exit"/>
